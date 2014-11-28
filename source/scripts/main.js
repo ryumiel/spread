@@ -16,6 +16,16 @@ require( [ "spread/Controller" ], function( Controller ) {
 
 	initListeners();
 	setTag();
+	runDemo();
+	function runDemo() {
+		setInterval( function() {
+			var mockEvent = {
+				pageX : window.innerWidth / 2,
+				pageY : window.innerHeight / 2
+			}
+			onClick(mockEvent);
+		}, 200 );
+	}
 
 	function setTag() {
 		tag.className = "before in";
